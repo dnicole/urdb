@@ -6,6 +6,7 @@ class VideosController < ApplicationController
 
   def show
     @next_video = Videos.next(params[:id])
+    @prev_video = Videos.prev(params[:id])
     @video = Videos.find(params[:id])
     @first_video = Videos.first
     @last_video = Videos.last
