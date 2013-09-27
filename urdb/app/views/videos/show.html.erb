@@ -1,1 +1,10 @@
-show.html.erb
+<h1><%= @video[:title] %></h1>
+
+<iframe width="420" height="315" src="//www.youtube.com/embed/<%=@video[:youtube_id]%>" frameborder="0" allowfullscreen></iframe>
+<p><%= @video[:description] %></p>
+<p>Rated: <%= @video.rating %></p>
+<p>Uploaded by: <%= @video[:uploaded_by] %></p>
+<p><%= image_tag @video.gif %></p>
+
+<p><%= link_to 'back', videos_url %></p>
+<p><%= link_to 'first', show_path(@first_video) %> -- <%= link_to 'next', show_path(@next_video) %> -- <%= link_to 'last', show_path(@last_video) %></p>

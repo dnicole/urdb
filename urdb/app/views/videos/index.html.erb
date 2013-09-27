@@ -1,7 +1,6 @@
 <ul> <h3>a bunch of movies i love</h3>
 	<% @videos.each do |video| %>
-		<li><%= link_to(video.title, video_path(video.id))  %><br>
-		<%= image_tag video.gif %></li>
+		<li><%= link_to(video.title, video_path(video.id))  %></li>
 		<br>
 	<% end -%>
 	
