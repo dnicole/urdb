@@ -33,15 +33,3 @@
         = f.text_field :time
       .submit
         = f.submit "Create Showtime", :class => "button"
-
-    / %form{action: "/movies/#{@movie.id}/showtimes", method: "post"}
-    /   .location
-    /     %label Location
-    /     %input{type: "text"}
-      
-    /   .time
-    /     %label Time
-    /     %input{type: "text"}
-      
-    /   .submit
-    /     %input.button{name: "commit", type: "submit", value: "Create Showtime"}
